@@ -3,7 +3,7 @@
     <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
     <xacro:arg name="ros2_control_hardware_type" default="mock_components" />
 
-    <!-- Import ur5e urdf file -->
+    <!-- Import ur3e urdf file -->
     <xacro:include filename="$(find ur_description)/urdf/ur5e.urdf.xacro" />
 
     <!-- Import control_xacro -->
