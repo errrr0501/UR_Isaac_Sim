@@ -112,6 +112,11 @@ def generate_launch_description():
         arguments=["ur5e_arm_controller", "-c", "/controller_manager"],
     )
 
+    gripper_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["gripper_controller", "-c", "/controller_manager"],
+    )
 
     return LaunchDescription(
         [
@@ -123,5 +128,6 @@ def generate_launch_description():
             ros2_control_node,
             joint_state_broadcaster_spawner,
             ur5e_arm_controller_spawner,
+            gripper_controller_spawner,
         ]
     )

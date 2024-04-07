@@ -8,7 +8,7 @@ controller_manager:
 
 
     gripper_controller:
-      type: joint_trajectory_controller/JointTrajectoryController
+      type: position_controllers/GripperActionController
 
 
     joint_state_broadcaster:
@@ -31,8 +31,3 @@ ur5e_arm_controller:
 gripper_controller:
   ros__parameters:
     joint: robotiq_85_left_knuckle_joint
-    command_interfaces:
-      - position
-    state_interfaces:
-      - position
-      - velocity
