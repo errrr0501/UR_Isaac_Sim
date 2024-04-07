@@ -38,13 +38,14 @@ colcon build --symlink-install
 
 6. Open a terminal to isaac sim directory, usual be "~/.local/share/ov/pkg/isaac_sim-<version>/"
 
+7. Locate ````ur5e_gripper_fixed.usd```` in your localhost Nucleus environment under the folder name ````ur5e_gripper````, if you haven't install Nucleus, please check ````https://docs.omniverse.nvidia.com/isaacsim/latest/installation/install_faq.html````.
 
-7. Launch Isaac-sim with ur5e_gripper inside the launch directory
+8. Launch Isaac-sim with ur5e_gripper inside the launch directory
  ````
  ./python.sh <your_workspace>/src/ur_isaac_sim/isaac_moveit_ur5e.py 
  ````
 
-8. Open another terminal to your workspace
+9. Open another terminal to your workspace
 ````
 cd <your workspace>
 . install/setup.bash
@@ -52,8 +53,8 @@ ros2 launch ur5e_gripper_moveit_config isaac_demo.launch.py ros2_control_hardwar
 
 ````
 
-9. Then your ur5e in isaac sim should connect to ur5e in Rviz, now you can plan ur5e and make it move in isaac sim
+10. Then your ur5e in isaac sim should connect to ur5e in Rviz, now you can plan ur5e and make it move in isaac sim
 
-10. If you want to build your own robot, you can use urdf importer in isaac sim with your robot model to export USD file, but probably need to add articulation root on it and check it can move or not after press start button. 
+11. If you want to build your own robot, you can use urdf importer in isaac sim with your robot model to export USD file, but probably need to add articulation root on it and check it can move or not after press start button. 
 
 
