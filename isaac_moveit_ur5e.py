@@ -16,8 +16,8 @@ from omni.isaac.kit import SimulationApp
 
 UR_STAGE_PATH = "/ur5e/ur5e"
 UR_STAGE_PATH1 = "/ur5e"
-# UR_USD_PATH = "/ur5e_gripper/ur5e_gripper.usd"
-UR_USD_PATH = "/ur5e_gripper/ur5e_home.usd"
+UR_USD_PATH = "/ur5e_gripper/ur5e_gripper_fixed.usd"
+# UR_USD_PATH = "/ur5e_gripper/ur5e_home.usd"
 
 
 BACKGROUND_STAGE_PATH = "/background"
