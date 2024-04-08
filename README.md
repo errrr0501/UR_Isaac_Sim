@@ -32,6 +32,8 @@ cd <your workspace>
 sudo apt update
 rosdep update
 rosdep install --ignore-src --from-paths src -y
+sudo apt install ros-humble-*-controllers
+sudo apt install ros-humble-joint-state-broadcaster
 sudo apt install ros-humble-topic-based-ros2-control
 colcon build --symlink-install
 ````
@@ -40,12 +42,15 @@ colcon build --symlink-install
 
 7. Locate ````ur5e_gripper_fixed.usd```` in your localhost Nucleus environment under the folder name ````ur5e_gripper````, if you haven't install Nucleus, please check ````https://docs.omniverse.nvidia.com/isaacsim/latest/installation/install_faq.html````.
 
-8. Launch Isaac-sim with ur5e_gripper inside the launch directory
+8. Enable your ROS2_bridge in isaac_sim ````https://docs.omniverse.nvidia.com/isaacsim/latest/installation/install_ros.html#enabling-the-ros-bridge-extension````.
+
+9. Export fastdds.xml for ROS2 Bridge and launch Isaac-sim with ur5e_gripper inside the launch directory
  ````
+ export FASTRTPS_DEFAULT_PROFILES_FILE=~/.ros/fastdds.xml
  ./python.sh <your_workspace>/src/ur_isaac_sim/isaac_moveit_ur5e.py 
  ````
 
-9. Open another terminal to your workspace
+10. Open another terminal to your workspace
 ````
 cd <your workspace>
 . install/setup.bash
@@ -53,8 +58,8 @@ ros2 launch ur5e_gripper_moveit_config isaac_demo.launch.py ros2_control_hardwar
 
 ````
 
-10. Then your ur5e in isaac sim should connect to ur5e in Rviz, now you can plan ur5e and make it move in isaac sim
+11. Then your ur5e in isaac sim should connect to ur5e in Rviz, now you can plan ur5e and make it move in isaac sim
 
-11. If you want to build your own robot, you can use urdf importer in isaac sim with your robot model to export USD file, but probably need to add articulation root on it and check it can move or not after press start button. 
+12. If you want to build your own robot, you can use urdf importer in isaac sim with your robot model to export USD file, but probably need to add articulation root on it and check it can move or not after press start button. 
 
 
