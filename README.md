@@ -40,14 +40,15 @@ colcon build --symlink-install
 
 6. Open a terminal to isaac sim directory, usual be "~/.local/share/ov/pkg/isaac_sim-<version>/"
 
-7. Locate ````ur5e_gripper_fixed.usd```` in your localhost Nucleus environment under the folder name ````ur5e_gripper````, if you haven't install Nucleus, please check ````https://docs.omniverse.nvidia.com/isaacsim/latest/installation/install_faq.html````.
+7. Locate ````ur5e_gripper_fixed.usd```` and ````testbed_table.usd````in your localhost Nucleus environment under the folder name ````ur5e_gripper````, if you haven't install Nucleus, please check ````https://docs.omniverse.nvidia.com/isaacsim/latest/installation/install_faq.html````.
 
 8. Enable your ROS2_bridge in isaac_sim ````https://docs.omniverse.nvidia.com/isaacsim/latest/installation/install_ros.html#enabling-the-ros-bridge-extension````.
 
 9. Export fastdds.xml for ROS2 Bridge and launch Isaac-sim with ur5e_gripper inside the launch directory
  ````
  export FASTRTPS_DEFAULT_PROFILES_FILE=~/.ros/fastdds.xml
- ./python.sh <your_workspace>/src/ur_isaac_sim/isaac_moveit_ur5e.py 
+ source /opt/ros/humble/setup.bash
+ ./python.sh <your_workspace>/src/ur_isaac_sim/isaac_python_scripts/isaac_moveit_ur5e.py 
  ````
 
 10. Open another terminal to your workspace
