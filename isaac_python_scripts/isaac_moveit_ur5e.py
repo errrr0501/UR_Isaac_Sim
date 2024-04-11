@@ -8,7 +8,6 @@
 # license agreement from NVIDIA CORPORATION is strictly prohibited.
 
 import sys
-print(sys.path)
 
 import carb
 import numpy as np
