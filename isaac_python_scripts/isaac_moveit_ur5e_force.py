@@ -6,32 +6,24 @@
 # and any modifications thereto.  Any use, reproduction, disclosure or
 # distribution of this software and related documentation without an express
 # license agreement from NVIDIA CORPORATION is strictly prohibited.
-from omni.isaac.core.articulations import Articulation
-import asyncio
-from omni.isaac.core import World
-from omni.isaac.core.utils.stage import (
-    add_reference_to_stage,
-    create_new_stage_async,
-    get_current_stage,
-)
-from omni.isaac.core.utils.nucleus import get_assets_root_path
-from pxr import UsdPhysics
 
 import sys
+print(sys.path)
 
 import carb
 import numpy as np
 from omni.isaac.kit import SimulationApp
+from omni.isaac.core.articulations import Articulation
 
 
-UR_STAGE_PATH = "/ur5e/ur5e"
-UR_STAGE_PATH1 = "/ur5e"
+UR_STAGE_PATH = "/World/ur5e"
+UR_STAGE_PATH1 = "/World"
 UR_USD_PATH = "/ur5e_gripper/ur5e_gripper_fixed.usd"
 # UR_USD_PATH = "/ur5e_gripper/ur5e_home.usd"
 
 
 BACKGROUND_STAGE_PATH = "/background"
-BACKGROUND_USD_PATH = "/ur3e_gripper_humble_moveit2-humble/testbed_table.usd"
+BACKGROUND_USD_PATH = "/ur5e_gripper/testbed_table.usd"
 CONFIG = {"renderer": "RayTracedLighting", "headless": False}
 
 # Example ROS2 bridge sample demonstrating the manual loading of stages

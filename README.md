@@ -15,12 +15,12 @@ git clone https://github.com/errrr0501/Universal_Robots_ROS2_Description.git -b 
 
 2. Clone robotiq_85_gripper repository to your local.
 ````
-https://github.com/errrr0501/robotiq_85_gripper.git
+git clone https://github.com/errrr0501/robotiq_85_gripper.git
 ````
 
 3. Clone this repository to your local.
 ````
-https://github.com/errrr0501/UR_Isaac_Sim.git
+git clone https://github.com/errrr0501/UR_Isaac_Sim.git src/ur_isaac_sim
 ````
 
 4. Install ROS2 Humble and Moveit2 if you haven't already.
@@ -33,7 +33,6 @@ sudo apt update
 rosdep update
 rosdep install --ignore-src --from-paths src -y
 sudo apt install ros-humble-*-controllers
-sudo apt install ros-humble-joint-state-broadcaster
 sudo apt install ros-humble-topic-based-ros2-control
 colcon build --symlink-install
 ````
