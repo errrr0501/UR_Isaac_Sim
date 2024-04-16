@@ -71,6 +71,7 @@ prims.create_prim(
 
 simulation_app.update()
 
+
 # Creating a action graph with ROS component nodes
 try:
     og.Controller.edit(

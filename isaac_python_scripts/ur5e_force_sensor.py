@@ -191,9 +191,8 @@ async def joint_force():
     child_link_index = arti_view._articulation_view.get_link_index(body_1_name)
     joint_link_id[joint_names_list[17]] = child_link_index
 
-    while 1:
-        print("joint link IDs", joint_link_id)
-        print(sensor_joint_forces[joint_link_id["wrist_3_joint"]])
-        print(sensor_actuation_efforts[joint_link_id["wrist_3_joint"]])
+    print("joint link IDs", joint_link_id)
+    print(sensor_joint_forces[joint_link_id["wrist_3_joint"]])
+    print(sensor_actuation_efforts[joint_link_id["wrist_3_joint"]])
 
 asyncio.ensure_future(joint_force())
