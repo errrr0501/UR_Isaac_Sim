@@ -21,7 +21,7 @@ async def joint_force():
         carb.log_error("Could not find Isaac Sim assets folder")
         simulation_app.close()
         sys.exit()
-    asset_path = assets_root_path + "/ur5e_gripper/ur5e_gripper_force.usd"
+    asset_path = assets_root_path + "/ur5e_gripper/ur5e_gripper_fixed.usd"
     add_reference_to_stage(usd_path=asset_path, prim_path="/World")
     await omni.kit.app.get_app().next_update_async()
     my_world.scene.add_default_ground_plane()
