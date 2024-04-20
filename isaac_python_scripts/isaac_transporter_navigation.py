@@ -22,8 +22,9 @@ TRANSPORTER_USD_PATH = "/isaac_transporter/transporter.usd"
 
 
 BACKGROUND_STAGE_PATH = "/World"
-BACKGROUND_USD_PATH = "/isaac_transporter/full_warehouse.usd"
-BACKGROUND_ENV_PATH = "/World/full_warehouse"
+# BACKGROUND_USD_PATH = "/isaac_transporter/full_warehouse.usd"
+BACKGROUND_USD_PATH = "/isaac_transporter/warehouse_without_physic.usd"
+BACKGROUND_ENV_PATH = "/World/warehouse"
 CONFIG = {"renderer": "RayTracedLighting", "headless": False}
 
 MALE_USD_PATH = "/isaac_transporter/male_adult_construction_05_new.usd"
