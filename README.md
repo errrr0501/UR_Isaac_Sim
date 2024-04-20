@@ -32,7 +32,6 @@ cd <your workspace>
 sudo apt update
 rosdep update
 rosdep install --ignore-src --from-paths src -y
-sudo apt install ros-humble-*-controllers
 sudo apt install ros-humble-topic-based-ros2-control
 colcon build --symlink-install
 ````
@@ -54,7 +53,7 @@ colcon build --symlink-install
 ````
 cd <your workspace>
 . install/setup.bash
-ros2 launch ur5e_gripper_moveit_config isaac_demo.launch.py ros2_control_hardware_type:=isaac
+ros2 launch ur5e_gripper_source_moveit_config isaac_demo.launch.py ros2_control_hardware_type:=isaac
 
 ````
 
