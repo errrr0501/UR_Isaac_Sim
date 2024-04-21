@@ -59,7 +59,7 @@ ros2 launch ur5e_gripper_source_moveit_config isaac_demo.launch.py ros2_control_
 
 11. Then your ur5e in isaac sim should connect to ur5e in Rviz, now you can plan ur5e and make it move in isaac sim
 
-12. For using moveit python api to control robot, you have to remove moveit2 binary installation and source build moveit2
+12. For using moveit python api to control robot, you have to remove moveit2 binary installation and source build moveit2, docker you can use ````https://github.com/errrr0501/humble_moveit2_docker.git````.
 
 13. Use moveit python api
 ````
