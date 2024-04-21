@@ -20,7 +20,7 @@ git clone https://github.com/errrr0501/robotiq_85_gripper.git
 
 3. Clone this repository to your local.
 ````
-git clone https://github.com/errrr0501/UR_Isaac_Sim.git src/ur_isaac_sim
+git clone https://github.com/errrr0501/UR_Isaac_Sim.git -b source_build_moveit2 src/ur_isaac_sim
 ````
 
 4. Install ROS2 Humble and Moveit2 if you haven't already.
