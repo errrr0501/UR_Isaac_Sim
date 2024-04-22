@@ -63,7 +63,7 @@ ros2 launch ur5e_gripper_moveit_config isaac_demo.launch.py ros2_control_hardwar
 
 12. Use moveit c++ api
 ````
-ros2 launch ur_moveit_cpp motion_planning.launch.py cpp_node:=joint_goal.py
+ros2 launch ur_moveit_cpp motion_planning.launch.py cpp_node:=joint_goal
 
 ````
 
