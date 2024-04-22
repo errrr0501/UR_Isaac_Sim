@@ -79,7 +79,7 @@ def main():
     ur5e_arm.set_goal_state(robot_state=robot_state)
 
 
-    plan_and_execute(ur5e, ur5e_arm, logger, sleep_time=3.0)
+    plan_and_execute(ur5e, ur5e_arm, logger, sleep_time=0.02)
 
     ur5e_arm.set_start_state_to_current_state()
 
@@ -102,7 +102,7 @@ def main():
     gripper.set_goal_state(robot_state=robot_state)
 
 
-    plan_and_execute(ur5e, gripper, logger, sleep_time=3.0)
+    plan_and_execute(ur5e, gripper, logger, sleep_time=0.02)
 
     gripper.set_start_state_to_current_state()
 

@@ -72,7 +72,7 @@ def main():
     # Set the target pose
     ur5e_arm.set_goal_state(pose_stamped_msg=pose_goal, pose_link="tool0")
 
-    plan_and_execute(ur5e, ur5e_arm, logger, sleep_time=3.0)
+    plan_and_execute(ur5e, ur5e_arm, logger, sleep_time=0.02)
 
     ur5e_arm.set_start_state_to_current_state()
 
