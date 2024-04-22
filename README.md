@@ -60,6 +60,13 @@ ros2 launch ur5e_gripper_moveit_config isaac_demo.launch.py ros2_control_hardwar
 
 11. Then your ur5e in isaac sim should connect to ur5e in Rviz, now you can plan ur5e and make it move in isaac sim
 
-12. If you want to build your own robot, you can use urdf importer in isaac sim with your robot model to export USD file, but probably need to add articulation root on it and check it can move or not after press start button. 
+
+12. Use moveit c++ api
+````
+ros2 launch ur_moveit_cpp motion_planning.launch.py cpp_node:=joint_goal.py
+
+````
+
+13. If you want to build your own robot, you can use urdf importer in isaac sim with your robot model to export USD file, but probably need to add articulation root on it and check it can move or not after press start button. 
 
 
