@@ -56,6 +56,20 @@ ament_target_dependencies(
   "rclcpp"
 )
 
+add_executable(pliz_move src/pliz_move.cpp)
+ament_target_dependencies(
+  pliz_move
+  "moveit_ros_planning_interface"
+  "rclcpp"
+)
+
+add_executable(tool_move src/tool_coordinate_move.cpp)
+ament_target_dependencies(
+  tool_move
+  "moveit_ros_planning_interface"
+  "rclcpp"
+)
+
 install(TARGETS pose_goal
   DESTINATION lib/${PROJECT_NAME})
 install(TARGETS joint_goal
@@ -68,7 +82,10 @@ install(TARGETS gripper_open
   DESTINATION lib/${PROJECT_NAME})
 install(TARGETS gripper_joint_value
   DESTINATION lib/${PROJECT_NAME})
-  
+install(TARGETS pliz_move
+  DESTINATION lib/${PROJECT_NAME})  
+install(TARGETS tool_move
+  DESTINATION lib/${PROJECT_NAME})  
 
 install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
 install(DIRECTORY config DESTINATION share/${PROJECT_NAME})
